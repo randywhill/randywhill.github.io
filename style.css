@@ -111,6 +111,11 @@ p {
   letter-spacing: 0.02em;
 }
 
+.research-interests {
+    margin-top: 0.25rem;
+    font-size: 0.95rem;
+}
+
 .research-intro {
   max-width: 620px;
   margin: 0;
