@@ -102,18 +102,17 @@ p {
   line-height: 1.5;
 }
 
-.fields {
-  margin: 0 0 2rem 0;
-
-  color: #0C234B;
-  font-size: 1rem;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-}
-
-.research-interests {
-    margin-top: 0.0rem;
-    font-size: 0.95rem;
+.fields { 
+  margin: 0 0 0.35rem 0; 
+  color: #0C234B; 
+  font-size: 1rem; 
+  line-height: 1.5; 
+  letter-spacing: 0.02em; 
+} 
+ 
+.research-interests { 
+  margin: 0 0 1.25rem 0;
+  font-size: 0.95rem; 
 }
 
 .research-intro {
