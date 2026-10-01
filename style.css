@@ -184,18 +184,86 @@ details {
   margin-top: 0.5rem;
 }
 
-summary {
-  display: inline-block;
+/* ---------- Research and publication content ---------- */
 
-  color: #0C234B;
+.paper-status {
+  margin-bottom: 0.7rem;
+
+  color: #AB0520;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.paper-description,
+.publication-authors,
+.publication-citation {
+  margin-bottom: 0.5rem;
+}
+
+.abstract-details {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Turns the summary into a inline alignment row */
+.abstract-details summary {
+  display: inline-flex;
+  align-items: center;
+
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.9rem;
+  cursor: default; /* Keeps the pointer clean across the row block */
+}
 
+/* Custom list-style arrow configuration (removes default behavior issues) */
+.abstract-details summary::-webkit-details-marker {
+  color: #0C234B;
+  margin-right: 4px;
+  cursor: pointer;
+}
+.abstract-details summary {
+  list-style-type: disclosure-closed;
+}
+.abstract-details[open] summary {
+  list-style-type: disclosure-open;
+}
+
+/* Independent hover configurations for the Abstract label */
+.abstract-details summary .summary-trigger {
+  color: #0C234B;
   cursor: pointer;
 }
 
-summary:hover {
+.abstract-details summary .summary-trigger:hover {
   color: #AB0520;
+}
+
+/* Structural grey layout divider pipe symbol styling */
+.abstract-details summary .divider {
+  color: #999;
+  margin: 0 10px;
+  user-select: none;
+}
+
+/* Independent PDF Link element typography styling - matches your main nav rules */
+.abstract-details summary .paper-pdf-link {
+  color: #0C234B;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Applies your precise academic crimson brand accent color on link hovering */
+.abstract-details summary .paper-pdf-link:hover,
+.abstract-details summary .paper-pdf-link:focus {
+  color: #AB0520;
+}
+
+/* Cleans up internal indent paragraph layout readability under open drawers */
+.abstract-details p {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #333;
 }
 
 
