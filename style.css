@@ -266,6 +266,15 @@ details {
   color: #333;
 }
 
+/* Removes the native dropdown triangle arrow from the abstract toggle */
+.abstract-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.abstract-details summary {
+  list-style: none;
+}
+
 
 /* ---------- Teaching content ---------- */
 
