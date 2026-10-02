@@ -266,15 +266,17 @@ details {
   color: #333;
 }
 
-/* Removes the native dropdown triangle arrow from the abstract toggle */
-.abstract-details summary::-webkit-details-marker {
-  display: none;
+/* Hard reset to strip out the browser's native disclosure arrows everywhere */
+.abstract-details summary::-webkit-details-marker,
+summary::-webkit-details-marker {
+  display: none !important;
 }
 
-.abstract-details summary {
-  list-style: none;
+.abstract-details summary,
+summary {
+  list-style: none !important;
+  list-style-type: none !important;
 }
-
 
 /* ---------- Teaching content ---------- */
 
