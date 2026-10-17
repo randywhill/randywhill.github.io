@@ -109,5 +109,16 @@
 </details>
   
 </main>
+  <script>
+  document.querySelectorAll('details[data-paper]').forEach(function(details) {
+    details.addEventListener('toggle', function() {
+      if (details.open && typeof gtag === 'function') {
+        gtag('event', 'abstract_open', {
+          paper_title: details.dataset.paper
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
