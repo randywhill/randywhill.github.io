@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randy Hill</title>
+
+  <base href="/">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ2Q915B37"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KZ2Q915B37');
+  </script>
+</head>
+
+<body>
+  <script>
+    fetch('/index.html')
+      .then(response => {
+        if (!response.ok) throw new Error('Homepage unavailable');
+        return response.text();
+      })
+      .then(html => {
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        document.body.innerHTML = doc.body.innerHTML;
+      })
+      .catch(() => {
+        document.body.textContent = 'Unable to load homepage.';
+      });
+  </script>
+</body>
+</html>
